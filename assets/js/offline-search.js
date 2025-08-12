@@ -32,7 +32,7 @@
     // Set up for an Ajax call to request the JSON data file that is created by Hugo's build process
     $.ajax($searchInput.data('offline-search-index-json-src')).then((data) => {
       idx = lunr(function () {
-        this.use(lunr.ru)
+        this.use(lunr.multiLanguage('en', 'ru'))
         this.ref('ref');
 
         // If you added more searchable fields to the search index, list them here.
