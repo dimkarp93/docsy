@@ -6,6 +6,8 @@ params:
   time_format_blog: Monday, January 02, 2006
   time_format_default: January 2, 2006
   rss_sections: [blog]
+  # for disabling shortcut for search
+  # disable_search_shortcut: true
 
 outputFormats:
   PRINT:
