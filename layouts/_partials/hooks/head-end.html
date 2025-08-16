@@ -1,3 +1,4 @@
 {{ if not .Site.Params.disable_search_shortcut }}
-<script defer src="{{ "js/search-shortcut.js" | relURL }}"></script>
+{{ $js := resources.Get "js/search-shortcut.js" | js.Build | minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>2
 {{ end }}
